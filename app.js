@@ -106,10 +106,10 @@ function startBot(config) {
             console.log('[BOT] Возвращаемся в лобби...');
             bot.chat('/hub');
         }
-        else if (msg.includes('пароль')) {
+        else if (msg === 'Нужно авторизоваться. Напишите в чат Ваш пароль') {
             bot.chat(config.password);
         }
-        else if (msg.includes('пин-пароль')) {
+        else if (msg === 'Напишите в чат Ваш пин-пароль (5 цифр)') {
             bot.chat(config.pin);
         }
         if (msg.split(' ')[0] == '[Новогодний' && msg.split(' ')[1] == 'кейс]') {
